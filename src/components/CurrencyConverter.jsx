@@ -13,7 +13,7 @@ const CurrencyConverter = () => {
   useEffect(() => {
     const getExchangeRate = async () => {
       try {
-        let apiKey = "6e0b38f4b5f3fdb35be08007";
+        let apiKey = "";
         let url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCurrency}`;
         const response = await axios.get(url);
         const currencyOptions = Object.keys(response.data.conversion_rates);
