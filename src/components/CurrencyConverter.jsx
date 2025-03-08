@@ -12,8 +12,8 @@ const CurrencyConverter = () => {
 
   useEffect(() => {
     const getExchangeRate = async () => {
+      let apiKey = import.meta.env.VITE_apikey;
       try {
-        let apiKey = "";
         let url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCurrency}`;
         const response = await axios.get(url);
         const currencyOptions = Object.keys(response.data.conversion_rates);
